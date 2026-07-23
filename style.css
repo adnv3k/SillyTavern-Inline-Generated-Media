@@ -1,0 +1,90 @@
+/*
+ * Inline Generated Media v1.0.0
+ *
+ * Controls remain hidden until the user hovers or keyboard-focuses the image.
+ */
+
+.mes_text > .igm-inline-host {
+    position: relative !important;
+    display: block !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0.75rem 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+.mes_text > .igm-inline-host > .igm-inline-clone {
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+}
+
+.igm-inline-clone .mes_img {
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important;
+    object-fit: contain !important;
+    pointer-events: auto !important;
+    cursor: zoom-in !important;
+}
+
+/* Hidden by default, matching SillyTavern's native media behavior. */
+.igm-inline-clone .mes_img_controls,
+.igm-inline-clone .mes_img_swipes {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition:
+        opacity 140ms ease,
+        visibility 0s linear 140ms !important;
+}
+
+/* Appear while hovering the media or navigating with a keyboard. */
+.igm-inline-clone:hover .mes_img_controls,
+.igm-inline-clone:hover .mes_img_swipes,
+.igm-inline-clone:focus-within .mes_img_controls,
+.igm-inline-clone:focus-within .mes_img_swipes {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition:
+        opacity 140ms ease,
+        visibility 0s linear 0s !important;
+}
+
+.igm-inline-clone .mes_media_enlarge,
+.igm-inline-clone .mes_img_caption,
+.igm-inline-clone .mes_media_delete,
+.igm-inline-clone .mes_img_swipe_left,
+.igm-inline-clone .mes_img_swipe_right {
+    cursor: pointer !important;
+}
+
+/*
+ * Keep the real media component alive for SillyTavern, but place its visual
+ * surface off-canvas.
+ */
+.mes_media_wrapper.igm-native-wrapper {
+    position: fixed !important;
+    left: -100000px !important;
+    top: 0 !important;
+    width: min(600px, 80vw) !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 0.001 !important;
+    pointer-events: none !important;
+    overflow: visible !important;
+}

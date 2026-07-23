@@ -1,0 +1,11 @@
+{
+    "display_name": "Inline Generated Media",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "adnv3k",
+    "version": "1.0.0",
+    "homePage": "https://github.com/adnv3k/SillyTavern-Inline-Generated-Media"
+}
